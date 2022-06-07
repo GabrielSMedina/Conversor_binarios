@@ -3,10 +3,11 @@ from utils.Utils import calcula_casas_necessarias, calcula_resto
 
 def decimal_binario():
     try:
-        n = int(input('Informe o valor inteiro a ser convertido: '))
+        n_original = int(input('Informe o valor inteiro a ser convertido: '))
     except ValueError:
         return 'Numero invalido!'
 
+    n = n_original
     binario = ''
 
     casas = calcula_casas_necessarias(n)
@@ -25,7 +26,7 @@ def decimal_binario():
             lista[casas] = '1'
             binario = ''.join(lista)
         casas = casas - 1
-    if n < 0:
+    if n_original < 0:
         return f'-{binario}'
     else:
         return binario
