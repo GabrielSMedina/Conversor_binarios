@@ -7,7 +7,7 @@ def decimal_binario():
     except ValueError:
         return 'Numero invalido!'
 
-    n = n_original
+    n = abs(n_original)
     binario = ''
 
     casas = calcula_casas_necessarias(n)
